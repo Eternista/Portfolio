@@ -1,0 +1,10 @@
+{
+    "gallery": [
+        {
+            "name": "Image-1",
+            "desktop": "src/",
+            "tablet": "src/",
+            "mobile": "src/"
+        }
+    ]
+}
