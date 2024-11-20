@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.page.light {
+    background-color: #f2f2f2
+}
+.page.dark {
+    background-color: #333333
+}
+
+.page.light *{
+   color: #333;
+}
+.page.dark {
+    color: #fff;
+}
