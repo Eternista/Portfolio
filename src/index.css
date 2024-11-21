@@ -2,21 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .page.light {
     background-color: #f2f2f2
 }
 .page.dark {
-    background-color: #333333
+    background-color: #000;
 }
 
 .page.light *{
-   color: #333;
+   color: #000;
 }
-.page.dark {
+.page.dark *{
     color: #fff;
 }
+
+.page.dark .logo {
+    fill: #fff;
+}
+
+#canvas canvas {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+  

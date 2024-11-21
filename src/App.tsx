@@ -3,12 +3,11 @@ import Header from "./partials/Header";
 import Footer from "./partials/Footer";
 import { getTestDate } from "./api/apiService";
 import { BrowserRouter } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import StarsCanvas from "./components/canvas/Stars";
+import ContactForm from "./components/ContactForm";
 
 export const AppContent = () => {
 
-  const {t} = useTranslation();
-  const [numOfClicks, setOfClicks] = useState<number>(0);
   const [pageColorPalet, setPageColorPalet] = useState(false);
 
   const colorPaletChange = () => {
@@ -20,12 +19,11 @@ export const AppContent = () => {
   }, []);
 
   return (
-    <div className={`page ${pageColorPalet ? "light" : "dark"}`}>
-      <Header handleColorPaletChange={colorPaletChange}/>
-      <main className="p-5">
-        <button onClick={() => setOfClicks((index) => ++index)}>
-        {t("clicks", { count: numOfClicks })}
-        </button>
+    <div className={`page h-[100vh] ${pageColorPalet ? "light" : "dark"}`}>
+      <StarsCanvas pageColor={pageColorPalet ? "#f272c8" : "#333"} />
+      <Header handleColorPaletChange={colorPaletChange} isPageDark={pageColorPalet}/>
+      <main className="p-5 max-w-[1360px] w-full mx-auto">
+        <ContactForm/>
       </main>
       <Footer />
     </div>
