@@ -12,7 +12,7 @@
 .page.light *{
    color: #000;
 }
-.page.dark *{
+.page.dark *:not(input, textarea){
     color: #fff;
 }
 
@@ -26,4 +26,11 @@
     left: 50%;
     transform: translateX(-50%); 
 }
-  
+
+.primary {
+    color: deepskyblue !important;
+}
+
+.primary .orange {
+    color: goldenrod !important;
+}

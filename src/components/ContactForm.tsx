@@ -4,11 +4,26 @@ const ContactForm = () => {
 
 
     return (
-        <section className="gap-4 flex">
-            <form className="flex-1 bg-[deepskyblue] p-5 rounded-xl">
-                <input type="text" placeholder="Siema ema" />
+        <section className="flex mb-16 items-center">
+            <form className="w-[40%] bg-[deepskyblue] rounded-xl">
+                <h2 className="text-white text-5xl p-5 font-bold">Contact form</h2>
+                <div className="bg-[royalblue] rounded-b-xl p-5">
+                    <label className="mb-4 block">
+                        <input type="text" placeholder="Name" className="w-full px-4 py-2 text-xl text-[#333] rounded-md" />
+                    </label>
+                    <label className="mb-4 block">
+                        <input type="email" placeholder="Email" className="w-full px-4 py-2 text-xl text-[#333] rounded-md" />
+                    </label>
+                    <label className="mb-4 block">
+                        <input type="text" placeholder="Subject" className="w-full px-4 py-2 text-xl text-[#333] rounded-md" />
+                    </label>
+                    <label className="mb-4 block">
+                        <textarea placeholder="Message:" className="w-full block resize-none h-52 overflow-auto px-4 py-2 text-xl text-[#333] rounded-md" />
+                    </label>
+                    <button className="bg-[crimson] px-4 py-2 text-xl rounded-md font-bold">Submit</button>
+                </div>
             </form>
-            <div className="flex-1">
+            <div className="w-[60%] h-96">
                 <RocketScene />
             </div>
 

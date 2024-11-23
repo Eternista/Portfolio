@@ -22,7 +22,7 @@ const Header = ({handleColorPaletChange, isPageDark}: HeaderProps) => {
     setAcLang(lang);
   };
   return (
-    <header className="w-full relative z-1 p-6">
+    <header className="w-full absolute z-1 p-6">
       <menu className="flex items-center justify-between">
         <img className="w-64" src={isPageDark ? logo : logoWhite} alt="logo" />     
         <div className="flex items-center gap-4 w-fit">

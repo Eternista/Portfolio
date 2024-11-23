@@ -1,4 +1,4 @@
 {
-    "welcome": "Welcome to our website!",
+    "welcome": "Hi I'm Rafał a <span class='block primary'><b class='orange'>Frontend</b> Developer</span>",
     "clicks": "Number of clicks: {{count}}"
 }

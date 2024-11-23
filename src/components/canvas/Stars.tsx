@@ -41,7 +41,7 @@ const Stars: React.FC<StarsProps> = (props) => {
 
 const StarsCanvas = (pageColor: string | any) => {
   return (
-    <div className="w-full h-auto absolute inset-0 z-0">
+    <div className="w-full h-full fixed top-0 left-0 bottom-0 right-0 inset-0 z-0">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars color={pageColor}/>
