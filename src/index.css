@@ -2,35 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-.page.light {
-    background-color: #f2f2f2
-}
-.page.dark {
-    background-color: #000;
+html, body {
+  overflow: hidden
 }
 
-.page.light *{
-   color: #000;
+.page.light {
+  background-color: #f2f2f2;
 }
-.page.dark *:not(input, textarea){
-    color: #fff;
+.page.dark {
+  background-color: #000;
+}
+
+.page.light * {
+  color: #000;
+}
+.page.dark *:not(input, textarea) {
+  color: #fff;
 }
 
 .page.dark .logo {
-    fill: #fff;
+  fill: #fff;
 }
 
 #canvas canvas {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); 
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .primary {
-    color: deepskyblue !important;
+  color: deepskyblue !important;
 }
 
 .primary .orange {
-    color: goldenrod !important;
+  color: goldenrod !important;
 }

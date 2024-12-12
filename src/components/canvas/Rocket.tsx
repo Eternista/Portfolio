@@ -31,7 +31,13 @@ const Lights = () => {
         intensity={1}
         position={[-300, 0, 600]}
       />
-      <pointLight color={0xa11148} intensity={2} distance={1000} decay={2} position={[200, -100, 50]} />
+      <pointLight
+        color={0xa11148}
+        intensity={2}
+        distance={1000}
+        decay={2}
+        position={[200, -100, 50]}
+      />
     </>
   );
 };

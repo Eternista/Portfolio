@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "deepskyblue"
+        primary: "deepskyblue",
+        secondary: "goldenrod"
       }
     },
   },

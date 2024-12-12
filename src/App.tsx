@@ -1,32 +1,50 @@
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Header from "./partials/Header";
 import Footer from "./partials/Footer";
-import { getTestDate } from "./api/apiService";
+import { getTestDate } from "./extras/apiService";
 import { BrowserRouter } from "react-router-dom";
 import StarsCanvas from "./components/canvas/Stars";
 import ContactForm from "./components/ContactForm";
 import Banner from "./components/Banner";
+import About from "./components/AboutMe";
+import TimelineSection from "./components/TimeLineSection";
 
 export const AppContent = () => {
-
-  const [pageColorPalet, setPageColorPalet] = useState(false);
-
-  const colorPaletChange = () => {
-    setPageColorPalet((prev) => !prev);
-  }
-
   useEffect(() => {
     getTestDate();
   }, []);
 
   return (
-    <div className={`page ${pageColorPalet ? "light" : "dark"}`}>
-      <StarsCanvas pageColor={pageColorPalet ? "#f272c8" : "#333"} />
-      <Header handleColorPaletChange={colorPaletChange} isPageDark={pageColorPalet}/>
-      <main className="p-5 max-w-[1360px] w-full relative z-1 mx-auto">
-        <Banner />
-        <ContactForm/>
-      </main>
+    <div className="page overflow-hidden h-[100vh] dark">
+      <StarsCanvas pageColor="#f272c8" />
+
+{/* DODAC SCROLL SLIDE CHANGE oraz przemyslec mobile kod do zoptymalizowania */}
+
+      <Swiper
+        direction={'vertical'}
+        spaceBetween={0}
+        slidesPerView={1}
+        simulateTouch={false}
+        onScroll={(swiper) => {console.log(swiper)}}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        className="z-1 h-[100vh]"
+      >
+        <SwiperSlide>
+          <Banner />
+        </SwiperSlide>
+        <SwiperSlide>
+          <About />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TimelineSection />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ContactForm />
+        </SwiperSlide>
+      </Swiper>
+      <Header />
       <Footer />
     </div>
   );

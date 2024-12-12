@@ -1,4 +1,21 @@
 {
     "welcome": "Hi I'm Rafał a <span class='block primary'><b class='orange'>Frontend</b> Developer</span>",
-    "clicks": "Number of clicks: {{count}}"
+    "clicks": "Number of clicks: {{count}}",
+    "jobHistory": [
+        {
+            "date": "10.2023 - 01.2024",
+            "title": "ENG Politechnika Gdańska",
+            "desc": "W Politechnice Gdańskiej pracowałem jako Frontend Developer. <br/> Głównie działałem w projektach z React'em - Typescript / Vite / Tailwind; Czasami zdarzało sie działać z Dockerem, Angularem, Symfony;<br/> "
+        },
+        { 
+            "date": "03.2022 - 08.2023",
+            "title": "GoldenSubmarine",
+            "desc": "PL PL"
+        },
+        { 
+            "date": "05.2021 - 11.2021",
+            "title": "Ideative",
+            "desc": "Lorem ipsum dolor..."
+        }
+    ]
 }

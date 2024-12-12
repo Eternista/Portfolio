@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
   const { t } = useTranslation();
-  const welcome = t('welcome');
+  const welcome = t("welcome");
 
   useEffect(() => {
     gsap.fromTo(
@@ -26,14 +26,17 @@ const Banner = () => {
           scrub: true, // This ensures smooth animation
           markers: false, // Set markers to true if you want to see the trigger points (optional for debugging)
         },
-      }
+      },
     );
   }, []);
 
   return (
-    <section className="banner h-[100vh] w-full flex justify-center items-center">
+    <section className="banner min-h-[100vh] w-full flex justify-center items-center">
       <div className="w-5/6">
-        <h1 className="text-8xl" dangerouslySetInnerHTML={{ __html: welcome }} />
+        <h1
+          className="text-8xl"
+          dangerouslySetInnerHTML={{ __html: welcome }}
+        />
       </div>
     </section>
   );
