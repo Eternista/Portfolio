@@ -5,12 +5,17 @@ interface NavProps {
   menu: singleMenuPosition[];
 }
 
-const Nav = ({ menu }: NavProps) => { 
+const Nav = ({ menu }: NavProps) => {
   return (
     <nav>
       <ul>
         {menu.map((item, idx) => (
-          <li key={idx}><Link to={item.link}><span>{item.text}</span>{item.icon}</Link></li>
+          <li key={idx}>
+            <Link to={item.link}>
+              <span>{item.text}</span>
+              {item.icon}
+            </Link>
+          </li>
         ))}
       </ul>
     </nav>

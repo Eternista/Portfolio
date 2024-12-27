@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel } from "swiper/modules";
 import Header from "./partials/Header";
 import Footer from "./partials/Footer";
 import { getTestDate } from "./extras/apiService";
@@ -19,16 +20,17 @@ export const AppContent = () => {
     <div className="page overflow-hidden h-[100vh] dark">
       <StarsCanvas pageColor="#f272c8" />
 
-{/* DODAC SCROLL SLIDE CHANGE oraz przemyslec mobile kod do zoptymalizowania */}
+      {/* DODAC SCROLL SLIDE CHANGE oraz przemyslec mobile kod do zoptymalizowania */}
 
       <Swiper
-        direction={'vertical'}
+        direction={"vertical"}
         spaceBetween={0}
         slidesPerView={1}
-        simulateTouch={false}
-        onScroll={(swiper) => {console.log(swiper)}}
-        onSlideChange={() => console.log('slide change')}
+        simulateTouch={true}
+        onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        mousewheel={true} // Włączenie obsługi scrolla
+        modules={[Mousewheel]} // Dodanie modułu Mousewheel
         className="z-1 h-[100vh]"
       >
         <SwiperSlide>

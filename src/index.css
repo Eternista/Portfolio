@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  overflow: hidden
+html,
+body {
+  overflow: hidden;
 }
 
 .page.light {
