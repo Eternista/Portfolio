@@ -1,4 +1,4 @@
-import Timeline from "./modules/Timeline";
+import Timeline from "../components/modules/Timeline";
 
 const TimelineSection = () => {
   return (

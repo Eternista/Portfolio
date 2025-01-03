@@ -6,12 +6,15 @@ import Footer from "./partials/Footer";
 import { getTestDate } from "./extras/apiService";
 import { BrowserRouter } from "react-router-dom";
 import StarsCanvas from "./components/canvas/Stars";
-import ContactForm from "./components/ContactForm";
-import Banner from "./components/Banner";
-import About from "./components/AboutMe";
-import TimelineSection from "./components/TimeLineSection";
+import ContactForm from "./pages/ContactForm";
+import Banner from "./pages/Banner";
+import About from "./pages/AboutMe";
+import TimelineSection from "./pages/TimeLineSection";
 
 export const AppContent = () => {
+
+  const DevMode = false;
+  
   useEffect(() => {
     getTestDate();
   }, []);
@@ -19,9 +22,6 @@ export const AppContent = () => {
   return (
     <div className="page overflow-hidden h-[100vh] dark">
       <StarsCanvas pageColor="#f272c8" />
-
-      {/* DODAC SCROLL SLIDE CHANGE oraz przemyslec mobile kod do zoptymalizowania */}
-
       <Swiper
         direction={"vertical"}
         spaceBetween={0}
@@ -43,11 +43,15 @@ export const AppContent = () => {
           <TimelineSection />
         </SwiperSlide>
         <SwiperSlide>
-          <ContactForm />
+          <ContactForm DevMode={DevMode} />
         </SwiperSlide>
       </Swiper>
-      <Header />
-      <Footer />
+      {!DevMode && (
+        <>
+          <Header />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };

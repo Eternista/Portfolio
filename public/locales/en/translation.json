@@ -17,5 +17,7 @@
             "title": "Ideative",
             "desc": "Lorem ipsum dolor..."
         }
-    ]
+    ],
+    "success": "Message sended with success, <br/> <span>I will answers as soon as I Can</span>",
+    "failure": "Something went wrong<br /> <span>Try again Later</span>"
 }

@@ -17,5 +17,7 @@
             "title": "Ideative",
             "desc": "Lorem ipsum dolor..."
         }
-    ]
+    ],
+    "success": "Wiadomość wysłana <br /> <span>Przy najbliżej okazji odpisze :)</span>",
+    "failure": "Coś poszło nie tak <br /> <span>Spróbuj ponownie później</span>"
 }
