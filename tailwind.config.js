@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        bebas: ['"Bebas Neue"', 'serif'], // Custom font for headings
+        manrope: ['"Manrope"', 'serif'], // Custom font for the rest
+      },
       colors: {
         primary: "deepskyblue",
         secondary: "goldenrod"

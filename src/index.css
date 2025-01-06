@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  overflow: hidden;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bebas;
+  }
+  
+  body {
+    @apply font-manrope;
+  }
 }
+
 
 .page.light {
   background-color: #f2f2f2;
@@ -38,4 +47,12 @@ body {
 
 .primary .orange {
   color: goldenrod !important;
+}
+
+.wrapper {
+  max-width: 1480px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  margin: 0 auto;
 }

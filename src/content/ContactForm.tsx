@@ -23,7 +23,7 @@ const ContactForm = (DevMode: boolean) => {
   };
 
   return (
-    <section className="flex w-full h-full mb-16 items-center justify-center">
+    <section className="flex mb-16 items-center justify-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="min-w-[380px] w-full max-w-[560px] bg-[deepskyblue] rounded-xl"
@@ -104,8 +104,7 @@ const ContactForm = (DevMode: boolean) => {
           )}
         </div>
       </form>
-
-      {!DevMode && (
+      {DevMode && (
         <DevTool control={control}/>
       )}
 
