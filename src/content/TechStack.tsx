@@ -28,28 +28,30 @@ const TechStack = () => {
               end: "top 20%", // When the item starts to leave the viewport
               toggleActions: "play reverse play reverse", // Play and reverse on enter/leave
             },
-          }
+          },
         );
       });
     }
   }, []);
 
-    return (
-        <Section sectionTitle="MY TECHSTACK">
-            <>
-                <div
-                    ref={containerRef}
-                    className="tech-stack grid grid-cols-6 gap-16 gap-y-16 justify-between"
-                >
-                    {
-                        TechStackList.map((item, techIndex) => (
-                            <SingleTech key={techIndex} techName={item.name} techSrc={item.src} />
-                        ))
-                    }
-                </div>
-            </>
-        </Section>
-    )
-}
+  return (
+    <Section sectionTitle="MY TECHSTACK">
+      <>
+        <div
+          ref={containerRef}
+          className="tech-stack grid grid-cols-6 gap-16 gap-y-16 justify-between"
+        >
+          {TechStackList.map((item, techIndex) => (
+            <SingleTech
+              key={techIndex}
+              techName={item.name}
+              techSrc={item.src}
+            />
+          ))}
+        </div>
+      </>
+    </Section>
+  );
+};
 
 export default TechStack;

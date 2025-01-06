@@ -13,54 +13,54 @@ import ts from "../assets/Tech-Stack/ts.svg";
 import angular from "../assets/Tech-Stack/angular.svg";
 
 const TechStackList = [
-    {
-        name: "HTML icon",
-        src: html
-    },
-    {
-        name: "CSS3 icon",
-        src: css
-    },
-    {
-        name: "JS icon",
-        src: js
-    },
-    {
-        name: "TS icon",
-        src: ts
-    },
-    {
-        name: "GSAP icon",
-        src: gsap
-    },
-    {
-        name: "Git icon",
-        src: git
-    },
-    {
-        name: "React icon",
-        src: react
-    },
-    {
-        name: "Redux icon",
-        src: redux
-    },
-    {
-        name: "Tailwind icon",
-        src: tailwind
-    },
-    {
-        name: "Angular icon",
-        src: angular
-    },
-    {
-        name: "Git icon",
-        src: sass
-    },
-    {
-        name: "Git icon",
-        src: bootstrap
-    },
-]
+  {
+    name: "HTML icon",
+    src: html,
+  },
+  {
+    name: "CSS3 icon",
+    src: css,
+  },
+  {
+    name: "JS icon",
+    src: js,
+  },
+  {
+    name: "TS icon",
+    src: ts,
+  },
+  {
+    name: "GSAP icon",
+    src: gsap,
+  },
+  {
+    name: "Git icon",
+    src: git,
+  },
+  {
+    name: "React icon",
+    src: react,
+  },
+  {
+    name: "Redux icon",
+    src: redux,
+  },
+  {
+    name: "Tailwind icon",
+    src: tailwind,
+  },
+  {
+    name: "Angular icon",
+    src: angular,
+  },
+  {
+    name: "Git icon",
+    src: sass,
+  },
+  {
+    name: "Git icon",
+    src: bootstrap,
+  },
+];
 
-export default TechStackList
+export default TechStackList;

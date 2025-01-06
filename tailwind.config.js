@@ -11,8 +11,8 @@ export default {
         manrope: ['"Manrope"', 'serif'], // Custom font for the rest
       },
       colors: {
-        primary: "deepskyblue",
-        secondary: "goldenrod"
+        primary: "#E2B33D",
+        secondary: "#1A1A1A"
       }
     },
   },

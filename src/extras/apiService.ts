@@ -12,7 +12,7 @@ export const getTestDate = async () => {
   try {
     const url = "";
     const response = await apiClient.get(url);
-    return response.data;
+    console.log(response.data);
   } catch (error) {
     //ERROR HANDLING
     console.log(error);

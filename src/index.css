@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bebas;
   }
-  
+
   body {
     @apply font-manrope;
   }
 }
-
 
 .page.light {
   background-color: #f2f2f2;
@@ -26,7 +29,7 @@
 .page.light * {
   color: #000;
 }
-.page.dark *:not(input, textarea) {
+.page.dark *:not(input, textarea, .text-black) {
   color: #fff;
 }
 

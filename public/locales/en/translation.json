@@ -1,5 +1,6 @@
 {
-    "welcome": "Hi I'm Rafał a <span class='block primary'><b class='orange'>Frontend</b> Developer</span>",
+    "welcome": "HI I'M RAFAŁ",
+    "description": "I’m a frontend developer based in Poland, with a passion for creating sleek, responsive websites and user-friendly interfaces. I enjoy transforming ideas into digital experiences using modern tools and technologies.",
     "clicks": "Number of clicks: {{count}}",
     "jobHistory": [
         {

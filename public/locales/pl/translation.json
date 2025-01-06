@@ -1,5 +1,6 @@
 {
-    "welcome": "Cześć jestem Rafał <span class='block primary'><b class='orange'>Frontend</b> Developer</span>",
+    "welcome": "JESTEM RAFAŁ",
+    "description": "Czyli frontend developer z Polski, z pasją do tworzenia eleganckich, responsywnych stron internetowych i przyjaznych interfejsów użytkownika. Lubię przekształcać pomysły w cyfrowe doświadczenia, korzystając z nowoczesnych narzędzi i technologii.",
     "clicks": "Liczba kliknięć: {{count}}",
     "jobHistory": [
         {

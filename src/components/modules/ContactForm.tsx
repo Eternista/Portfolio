@@ -1,18 +1,27 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
-import { ContactFormTypes, FormStage } from "../extras/interfaces";
-import { ContactSubmit } from "../functions/FormSubmit";
+import { ContactFormTypes, FormStage } from "../../extras/interfaces";
+import { ContactSubmit } from "../../functions/FormSubmit";
 import { useState } from "react";
 import { FaCircleCheck, FaCircleXmark } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
-const ContactForm = (DevMode: boolean) => {
+interface ContactFromProps {
+  DevMode: boolean;
+}
+
+const ContactForm = ({ DevMode }: ContactFromProps) => {
   const { t } = useTranslation();
   const success = t("success");
   const failure = t("failure");
 
-  const {control, register, handleSubmit, formState: { errors } } = useForm<ContactFormTypes>();
-  const [formStage, setFormStage] = useState<FormStage>("none")
+  const {
+    control,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormTypes>();
+  const [formStage, setFormStage] = useState<FormStage>("none");
 
   const onSubmit = async (data: ContactFormTypes) => {
     try {
@@ -23,14 +32,13 @@ const ContactForm = (DevMode: boolean) => {
   };
 
   return (
-    <section className="flex mb-16 items-center justify-center">
+    <>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="min-w-[380px] w-full max-w-[560px] bg-[deepskyblue] rounded-xl"
       >
         <h2 className="text-white text-5xl p-5 font-bold">Contact Form</h2>
         <div className="bg-[royalblue] h-[488px] rounded-b-xl p-5">
-
           {formStage === "none" && (
             <>
               <label className="mb-4 block">
@@ -40,7 +48,9 @@ const ContactForm = (DevMode: boolean) => {
                   placeholder="Name"
                   className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
                 />
-                {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
+                {errors.name && (
+                  <p className="text-red-500 text-sm">{errors.name.message}</p>
+                )}
               </label>
               <label className="mb-4 block">
                 <input
@@ -55,7 +65,9 @@ const ContactForm = (DevMode: boolean) => {
                   placeholder="Email"
                   className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
                 />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email.message}</p>
+                )}
               </label>
               <label className="mb-4 block">
                 <input
@@ -64,7 +76,11 @@ const ContactForm = (DevMode: boolean) => {
                   placeholder="Subject"
                   className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
                 />
-                {errors.subject && <p className="text-red-500 text-sm">{errors.subject.message}</p>}
+                {errors.subject && (
+                  <p className="text-red-500 text-sm">
+                    {errors.subject.message}
+                  </p>
+                )}
               </label>
               <label className="mb-4 block">
                 <textarea
@@ -72,7 +88,11 @@ const ContactForm = (DevMode: boolean) => {
                   placeholder="Message"
                   className="w-full block resize-none h-52 overflow-auto px-4 py-2 text-xl text-[#333] rounded-md"
                 />
-                {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
+                {errors.message && (
+                  <p className="text-red-500 text-sm">
+                    {errors.message.message}
+                  </p>
+                )}
               </label>
               <button
                 type="submit"
@@ -84,31 +104,34 @@ const ContactForm = (DevMode: boolean) => {
           )}
           {formStage === "success" && (
             <div className="mb-4 flex">
-                <div className="rounded-full h-32 w-32 bg-white">
-                  <FaCircleCheck fill="green" className="w-full h-full border rounded-full border-white" />
-                </div>
-                <div className="px-4 py-2">
-                  <p dangerouslySetInnerHTML={{ __html: success }}/>
-                </div>
+              <div className="rounded-full h-32 w-32 bg-white">
+                <FaCircleCheck
+                  fill="green"
+                  className="w-full h-full border rounded-full border-white"
+                />
+              </div>
+              <div className="px-4 py-2">
+                <p dangerouslySetInnerHTML={{ __html: success }} />
+              </div>
             </div>
           )}
           {formStage === "failure" && (
             <div className="mb-4 flex">
-                <div className="rounded-full h-32 w-32 bg-white">
-                  <FaCircleXmark fill="red" className="w-full h-full border rounded-full border-white"/>
-                </div>
-                <div className="px-4 py-2">
-                  <p dangerouslySetInnerHTML={{ __html: failure }}/>
-                </div>
+              <div className="rounded-full h-32 w-32 bg-white">
+                <FaCircleXmark
+                  fill="red"
+                  className="w-full h-full border rounded-full border-white"
+                />
+              </div>
+              <div className="px-4 py-2">
+                <p dangerouslySetInnerHTML={{ __html: failure }} />
+              </div>
             </div>
           )}
         </div>
       </form>
-      {DevMode && (
-        <DevTool control={control}/>
-      )}
-
-    </section>
+      {!DevMode && <DevTool control={control} />}
+    </>
   );
 };
 
