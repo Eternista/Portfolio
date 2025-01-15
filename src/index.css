@@ -29,7 +29,7 @@
 .page.light * {
   color: #000;
 }
-.page.dark *:not(input, textarea, .text-black) {
+.page.dark *:not(input, textarea, .text-black, .text-unlock) {
   color: #fff;
 }
 
@@ -58,4 +58,13 @@
   padding-right: 20px;
   width: 100%;
   margin: 0 auto;
+}
+
+.bg-gradient {
+  background: linear-gradient(90deg, #484848 0%, #aeaeae 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

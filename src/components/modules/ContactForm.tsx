@@ -15,6 +15,12 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
   const success = t("success");
   const failure = t("failure");
 
+  const componentClasses = {
+    input: "bg-secondary w-full px-4 py-3 text-xl text-white rounded-md",
+    textarea:
+      "bg-secondary w-full block resize-none h-40 overflow-auto px-4 py-3 text-xl text-white rounded-lg",
+  };
+
   const {
     control,
     register,
@@ -35,24 +41,24 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="min-w-[380px] w-full max-w-[560px] bg-[deepskyblue] rounded-xl"
+        className="min-w-[380px] w-full max-w-[720px]"
       >
-        <h2 className="text-white text-5xl p-5 font-bold">Contact Form</h2>
-        <div className="bg-[royalblue] h-[488px] rounded-b-xl p-5">
+        <div className="h-[611px] flex flex-col gap-6">
           {formStage === "none" && (
             <>
-              <label className="mb-4 block">
+              <label className="block">
+                <p className="mb-3">Name</p>
                 <input
                   {...register("name", { required: "Name is required" })}
                   type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
+                  className={componentClasses.input}
                 />
                 {errors.name && (
                   <p className="text-red-500 text-sm">{errors.name.message}</p>
                 )}
               </label>
-              <label className="mb-4 block">
+              <label className="block">
+                <p className="mb-3">Email</p>
                 <input
                   {...register("email", {
                     required: "Email is required",
@@ -62,19 +68,18 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
                     },
                   })}
                   type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
+                  className={componentClasses.input}
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm">{errors.email.message}</p>
                 )}
               </label>
-              <label className="mb-4 block">
+              <label className="block">
+                <p className="mb-3">Subject</p>
                 <input
                   {...register("subject", { required: "Subject is required" })}
                   type="text"
-                  placeholder="Subject"
-                  className="w-full px-4 py-2 text-xl text-[#333] rounded-md"
+                  className={componentClasses.input}
                 />
                 {errors.subject && (
                   <p className="text-red-500 text-sm">
@@ -82,11 +87,11 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
                   </p>
                 )}
               </label>
-              <label className="mb-4 block">
+              <label className="block">
+                <p className="mb-3">Message</p>
                 <textarea
                   {...register("message", { required: "Message is required" })}
-                  placeholder="Message"
-                  className="w-full block resize-none h-52 overflow-auto px-4 py-2 text-xl text-[#333] rounded-md"
+                  className={componentClasses.textarea}
                 />
                 {errors.message && (
                   <p className="text-red-500 text-sm">
@@ -96,9 +101,11 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
               </label>
               <button
                 type="submit"
-                className="bg-secondary hover:bg-orange-700 transition-colors px-4 py-2 text-xl rounded-md font-bold"
+                className="w-36 text-center bg-primary px-6 py-5 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
               >
-                Submit
+                <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
+                  SUBMIT
+                </span>
               </button>
             </>
           )}

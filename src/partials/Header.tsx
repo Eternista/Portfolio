@@ -1,6 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import logoWhite from "../assets/logo-white.svg";
+import logo from "../assets/logo.png";
+
+const menuList = [
+  {
+    name: "O mnie",
+    nameEn: "About",
+    link: "#about"
+  },
+  {
+    name: "Narzędzia",
+    nameEn: "Tech Stack",
+    link: "#techstack"
+  },
+  {
+    name: "Projekty",
+    nameEn: "Projects",
+    link: "#projects"
+  },
+  {
+    name: "Opinie",
+    nameEn: "Testimonials",
+    link: "#testimonials"
+  }
+];
 
 const styleContainer = {
   button: "text-xl transition-all text-bold text-white hover:text-primary",
@@ -9,16 +32,56 @@ const styleContainer = {
 const Header = () => {
   const { i18n } = useTranslation();
   const [acLang, setAcLang] = useState<string>(i18n.language);
+  const [scrolled, setScrolled] = useState(false);
+
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
     setAcLang(lang);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0); // Check if the user has scrolled
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
+    };
+  }, []);
+
   return (
-    <header className="w-full absolute top-0 left-0 z-30 p-6">
+    <header
+      className={`w-full fixed top-0 left-0 z-30 p-6 transition-colors duration-300 ${
+        scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
+      }`}
+    >
       <menu className="flex items-center justify-between">
-        <img className="w-64" src={logoWhite} alt="logo" />
-        <div className="flex items-center gap-4 w-fit">
-          {acLang == "en" ? (
+        <img className="w-24" src={logo} alt="logo" />
+        <div className="flex items-center w-fit">
+          <ul className="flex items-center gap-8 mr-8 w-fit justify-between">
+            {menuList.map((item, menuIndex) => (
+              <li key={menuIndex}>
+                <a
+                  className="text-uppercase text-white text-lg"
+                  href={item.link}
+                >
+                  {acLang === "en" ? item.nameEn : item.name}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="contact"
+                className="w-36 text-center bg-primary px-4 py-3 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
+              >
+                <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
+                  {acLang === "en" ? "Contact" : "Kontakt"}
+                </span>
+              </a>
+            </li>
+          </ul>
+          {acLang === "en" ? (
             <button
               className={styleContainer.button}
               onClick={() => {

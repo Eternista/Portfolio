@@ -16,7 +16,7 @@ const Banner = () => {
   const desc = t("description");
 
   return (
-    <Section>
+    <Section idName="banner">
       <div className="flex items-center justify-between">
         <div className="max-w-xl w-full">
           <h1

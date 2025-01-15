@@ -35,7 +35,7 @@ const TechStack = () => {
   }, []);
 
   return (
-    <Section sectionTitle="MY TECHSTACK">
+    <Section idName="techstack" sectionTitle="MY TECHSTACK">
       <>
         <div
           ref={containerRef}
