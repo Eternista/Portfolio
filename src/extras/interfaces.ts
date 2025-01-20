@@ -12,3 +12,13 @@ export type ContactFormTypes = {
 };
 
 export type FormStage = "success" | "failure" | "none";
+
+export interface SingleProjectProps {
+  heading: string;
+  description: string;
+  role: string;
+  image: string;
+  imageAlt: string;
+  firm: string;
+  client?: string;
+}

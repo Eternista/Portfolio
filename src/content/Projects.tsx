@@ -1,7 +1,7 @@
 import Section from "../components/modules/Section";
 import SingleProject from "../components/Single/SingleProject";
-import Honda from "../assets/Projects/honda.jpg"
-import ChatPG from "../assets/Projects/ChatPG.jpg"
+
+import ProjectList from "../extras/projectsData";
 
 const Projects = () => {
 
@@ -9,16 +9,18 @@ const Projects = () => {
         <Section idName="projects" sectionTitle="FEATURED PROJECTS">
             <>
                 <p className="max-w-[600px] mb-20 text-lg">Here are some of the selected projects that showcase my passion for front-end development.</p>
-                <SingleProject 
-                    heading="Chat PG AI from students and employes"
-                    description="Project realized with a JAVA developer and AI - Spiecialist"
-                    role="Frontend Developer"
-                    imageAlt="Image of Chat PG Developer Website"
-                    firm="Politechnika Gdańska"
-                    client="pg.edu"
-                    image={ChatPG}
-
-                />
+                {ProjectList.map((project, projectIndex) => (
+                    <SingleProject
+                        key={projectIndex}
+                        heading={project.heading}
+                        description={project.description}
+                        role={project.role}
+                        imageAlt={project.imageAlt}
+                        firm={project.firm}
+                        client={project.client}
+                        image={project.image}
+                    />
+                ))}
             </>
         </Section>
     )
