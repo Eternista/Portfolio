@@ -68,3 +68,11 @@
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-wrapper .swiper-slide {
+  height: unset;
+}

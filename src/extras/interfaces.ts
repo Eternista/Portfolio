@@ -22,3 +22,10 @@ export interface SingleProjectProps {
   firm: string;
   client?: string;
 }
+
+export interface SingleSlideProps {
+  img: string;
+  opinion: string;
+  name: string;
+  role: string;
+}

@@ -5,6 +5,7 @@ import Banner from "./content/Banner";
 import About from "./content/AboutMe";
 import TechStack from "./content/TechStack";
 import Projects from "./content/Projects";
+import Testimonials from "./content/Testimonials";
 import Separete from "./components/Single/Separate";
 
 export const AppContent = () => {
@@ -18,6 +19,8 @@ export const AppContent = () => {
       <Separete classNames="w-1/3" />
       <Projects />
       <Separete classNames="w-1/2" />
+      <Testimonials />
+      <Separete classNames="w-3/4" />
       <About />
       <Separete classNames="w-full" />
       <Contact DevMode={DevMode} />

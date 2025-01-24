@@ -1,3 +1,4 @@
+import React from "react";
 import { FaCalendar, FaBuilding, FaLocationDot } from "react-icons/fa6";
 import Separete from "./Separate";
 
@@ -6,6 +7,7 @@ interface expHistoryProps {
   term: string;
   organizationName: string;
   organizationLocation: string;
+  id: number;
 }
 
 interface SingleExpProps {
@@ -17,9 +19,9 @@ const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
   return (
     <div className="mb-10">
       <h3 className="text-4xl mb-4">{heading}</h3>
-      {expHistory.map((item, expIndex) => (
-        <>
-          <div key={expIndex} className="flex flex-col mb-4 gap-4">
+      {expHistory.map((item, itemIndex) => (
+        <React.Fragment key={item.id}>
+          <div className="flex flex-col mb-4 gap-4">
             <div className="flex justify-between">
               <p>{item.role}</p>
               <time className="flex gap-2 items-center">
@@ -45,7 +47,7 @@ const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
             </div>
           </div>
           <Separete classNames="w-full mb-4" />
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

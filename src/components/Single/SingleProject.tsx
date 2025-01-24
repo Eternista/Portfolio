@@ -6,7 +6,7 @@ const SingleProject = ({heading, description, role, image, imageAlt, firm, clien
     return (
         <div className="flex lg: items-center justify-between gap-12 mb-32">
             <div className="bg-gray-800 rounded-3xl max-w-[600px] w-full px-14 py-32 flex items-center justify-center">
-                <img src={image} alt={imageAlt}/>
+                <img className="rounded-3xl" src={image} alt={imageAlt}/>
             </div>
             <div className="context w-full">
                 <h3 className="text-3xl">{heading}</h3>
