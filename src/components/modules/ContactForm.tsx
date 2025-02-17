@@ -14,6 +14,10 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
   const { t } = useTranslation();
   const success = t("success");
   const failure = t("failure");
+  const formName = t("formName");
+  const formSubject = t("formSubject");
+  const formMessage = t("formMessage");
+  const formSubmit = t("formSubmit");
 
   const componentClasses = {
     input: "bg-secondary w-full px-4 py-3 text-xl text-white rounded-md",
@@ -47,7 +51,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
           {formStage === "none" && (
             <>
               <label className="block">
-                <p className="mb-3">Name</p>
+                <p className="mb-3">{formName}</p>
                 <input
                   {...register("name", { required: "Name is required" })}
                   type="text"
@@ -75,7 +79,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
                 )}
               </label>
               <label className="block">
-                <p className="mb-3">Subject</p>
+                <p className="mb-3">{formSubject}</p>
                 <input
                   {...register("subject", { required: "Subject is required" })}
                   type="text"
@@ -88,7 +92,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
                 )}
               </label>
               <label className="block">
-                <p className="mb-3">Message</p>
+                <p className="mb-3">{formMessage}</p>
                 <textarea
                   {...register("message", { required: "Message is required" })}
                   className={componentClasses.textarea}
@@ -104,7 +108,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
                 className="w-36 text-center bg-primary px-6 py-5 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
               >
                 <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
-                  SUBMIT
+                  {formSubmit}
                 </span>
               </button>
             </>

@@ -2,23 +2,6 @@
     "welcome": "HI I'M RAFAŁ",
     "description": "I’m a frontend developer based in Poland, with a passion for creating sleek, responsive websites and user-friendly interfaces. I enjoy transforming ideas into digital experiences using modern tools and technologies.",
     "clicks": "Number of clicks: {{count}}",
-    "jobHistory": [
-        {
-            "date": "10.2023 - 01.2024",
-            "title": "ENG Politechnika Gdańska",
-            "desc": "W Politechnice Gdańskiej pracowałem jako Frontend Developer. <br/> Głównie działałem w projektach z React'em - Typescript / Vite / Tailwind; Czasami zdarzało sie działać z Dockerem, Angularem, Symfony;<br/> "
-        },
-        { 
-            "date": "03.2022 - 08.2023",
-            "title": "GoldenSubmarine",
-            "desc": "PL PL"
-        },
-        { 
-            "date": "05.2021 - 11.2021",
-            "title": "Ideative",
-            "desc": "Lorem ipsum dolor..."
-        }
-    ],
     "AboutMe": "ABOUT ME",
     "aboutDesc": "I’m a frontend developer based in Poland, with a passion for creating sleek, responsive websites and user-friendly interfaces. I enjoy transforming ideas into digital experiences using modern tools and technologies. When I’m not diving into code, I’m likely exploring the latest tech trends, sipping on a strong cup of coffee, or brainstorming new ways to solve challenging problems. Let’s build something great together!",
     "success": "Message sended with success, <br/> <span>I will answers as soon as I Can</span>",
@@ -26,11 +9,16 @@
     "client": "Client",
     "firm": "Working For",
     "role": "Role",
+    "myTechstack": "MY TECHSTACK",
     "projectInfo": "PROJECT INFO",
     "workExp": "WORK EXPERIENCE",
     "contactHead": "LET'S CONNECT",
     "contactDesc": "Say hello at",
     "contactEmail": "your email address",
     "contactDesc2": "For more info, here's my",
-    "resume": "resume"
+    "resume": "resume",
+    "formName": "Name",
+    "formSubject": "Subject",
+    "formMessage": "Message",
+    "formSubmit": "Submit"
 }

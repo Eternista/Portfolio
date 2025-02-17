@@ -9,7 +9,7 @@ interface SectionProps {
 
 const Section = ({idName, classNames, sectionTitle, children }: SectionProps) => {
   return (
-    <section id={idName} className={`lg:py-24 md:py-18 py-12 w-full ${classNames}`}>
+    <section id={idName} className={`section lg:py-24 md:py-18 py-12 w-full ${classNames}`}>
       <div className="wrapper">
         {sectionTitle && (
           <h2 className="text-white lg:mb-20 md:mb-16 mb-8 text-7xl">{sectionTitle}</h2>
