@@ -5,7 +5,11 @@ import DualIcon from "../components/modules/Dual-icons";
 import Logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
 
-const Contact = (DevMode: boolean) => {
+interface ContactProps {
+  DevMode: boolean;
+}
+
+const Contact = ({DevMode} : ContactProps) => {
 
   const { t } = useTranslation();
   const heading = t("contactHead");
