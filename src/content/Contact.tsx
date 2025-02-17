@@ -7,7 +7,7 @@ import Logo from "../assets/logo.png";
 const Contact = (DevMode: boolean) => {
   return (
     <Section idName="contact">
-      <div className="flex justify-between">
+      <div className="flex justify-between lg:flex-row flex-col gap-8 lg:gap-0">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col gap-4">
             <h2 className="text-white text-7xl">LET'S CONNECT</h2>
@@ -29,9 +29,10 @@ const Contact = (DevMode: boolean) => {
               <DualIcon />
             </div>
           </div>
-          <img className="w-24" src={Logo} alt="My Logo" />
+          <img className="lg:block hidden w-24" src={Logo} alt="My Logo" />
         </div>
         <ContactForm DevMode={DevMode} />
+        <img className="lg:hidden block w-24 mt-4" src={Logo} alt="My Logo" />
       </div>
     </Section>
   );

@@ -41,7 +41,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
     <>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="min-w-[380px] w-full max-w-[720px]"
+        className="md:min-w-[380px] w-full max-w-[720px]"
       >
         <div className="h-[611px] flex flex-col gap-6">
           {formStage === "none" && (

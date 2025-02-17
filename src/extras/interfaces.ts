@@ -15,17 +15,23 @@ export type FormStage = "success" | "failure" | "none";
 
 export interface SingleProjectProps {
   heading: string;
+  headingEN: string;
   description: string;
+  descriptionEN: string;
   role: string;
   image: string;
   imageAlt: string;
+  imageAltEN: string;
   firm: string;
+  firmEN: string;
   client?: string;
 }
 
 export interface SingleSlideProps {
   img: string;
   opinion: string;
+  opinionEN: string;
   name: string;
   role: string;
+  roleEN: string;
 }

@@ -17,10 +17,10 @@ const Banner = () => {
 
   return (
     <Section idName="banner">
-      <div className="flex items-center justify-between">
+      <div className="flex lg:flex-row flex-col-reverse items-center justify-between">
         <div className="max-w-xl w-full">
           <h1
-            className="text-9xl mb-6"
+            className="lg:text-9xl text-8xl mb-6"
             dangerouslySetInnerHTML={{ __html: welcome }}
           />
           <p className="mb-11">{desc}</p>
@@ -57,7 +57,7 @@ const Banner = () => {
             <DualIcon />
           </div>
         </div>
-        <Portrait imgSrc={MEJPG} />
+        <Portrait imgSrc={MEJPG} classes=""/>
       </div>
     </Section>
   );

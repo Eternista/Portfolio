@@ -1,11 +1,14 @@
-import React from "react";
+import React  from "react";
 import { FaCalendar, FaBuilding, FaLocationDot } from "react-icons/fa6";
 import Separete from "./Separate";
+import { useTranslation } from "react-i18next";
 
 interface expHistoryProps {
   role: string;
   term: string;
+  termEN: string;
   organizationName: string;
+  organizationNameEN: string;
   organizationLocation: string;
   id: number;
 }
@@ -16,6 +19,10 @@ interface SingleExpProps {
 }
 
 const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
+
+  const { i18n } = useTranslation();
+  const language = i18n.language;
+
   return (
     <div className="mb-10">
       <h3 className="text-4xl mb-4">{heading}</h3>
@@ -26,27 +33,41 @@ const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
               <p>{item.role}</p>
               <time className="flex gap-2 items-center">
                 <FaCalendar />{" "}
-                <small className="text-unlock text-[#c7c7c7]">
-                  {item.term}
+                <small className="text-unlock text-sm text-[#c7c7c7]">
+                  {
+                    language == "en" 
+                    ? 
+                    (item.term) 
+                    :
+                    (item.termEN)
+                  }
                 </small>
               </time>
             </div>
             <div className="flex justify-between">
               <p className="flex items-center gap-2">
                 <FaBuilding />
-                <small className="text-unlock text-[#c7c7c7]">
-                  {item.organizationName}
+                <small className="text-unlock text-sm text-[#c7c7c7]">
+                  {
+                    language == "en" 
+                    ? 
+                    (item.organizationName) 
+                    :
+                    (item.organizationNameEN)
+                  }
                 </small>
               </p>
               <p className="flex items-center gap-2">
                 <FaLocationDot />
-                <small className="text-unlock text-[#c7c7c7]">
+                <small className="text-unlock text-sm text-[#c7c7c7]">
                   {item.organizationLocation}
                 </small>
               </p>
             </div>
           </div>
-          <Separete classNames="w-full mb-4" />
+          {itemIndex + 1 !== expHistory.length && (
+            <Separete classNames="w-full mb-4" />
+          )}
         </React.Fragment>
       ))}
     </div>

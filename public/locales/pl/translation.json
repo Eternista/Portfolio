@@ -1,5 +1,6 @@
 {
     "welcome": "JESTEM RAFAŁ",
+    "AboutMe": "O MNIE",
     "description": "Czyli frontend developer z Polski, z pasją do tworzenia eleganckich, responsywnych stron internetowych i przyjaznych interfejsów użytkownika. Lubię przekształcać pomysły w cyfrowe doświadczenia, korzystając z nowoczesnych narzędzi i technologii.",
     "clicks": "Liczba kliknięć: {{count}}",
     "jobHistory": [
@@ -20,5 +21,11 @@
         }
     ],
     "success": "Wiadomość wysłana <br /> <span>Przy najbliżej okazji odpisze :)</span>",
-    "failure": "Coś poszło nie tak <br /> <span>Spróbuj ponownie później</span>"
+    "aboutDesc": "Jestem frontend developerem z Polski, z pasją do tworzenia eleganckich, responsywnych stron internetowych i przyjaznych dla użytkownika interfejsów. Lubię przekształcać pomysły w cyfrowe doświadczenia, korzystając z nowoczesnych narzędzi i technologii. Kiedy nie zagłębiam się w kod, prawdopodobnie eksploruję najnowsze trendy technologiczne, delektuję się mocną kawą lub wymyślam nowe sposoby na rozwiązywanie trudnych problemów. Stwórzmy razem coś wspaniałego!",
+    "failure": "Coś poszło nie tak <br /> <span>Spróbuj ponownie później</span>",
+    "client": "Klient",
+    "firm": "Pracodawca",
+    "role": "Rola",
+    "projectInfo": "DANE",
+    "workExp": "Doświadczenie"
 }

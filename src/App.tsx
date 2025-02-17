@@ -12,7 +12,7 @@ export const AppContent = () => {
   const DevMode = false;
 
   return (
-    <div className="page dark pt-32">
+    <div className="page dark lg:pt-32 md:pt-24 pt-16">
       <Banner />
       <Separete classNames="w-1/4" />
       <TechStack />

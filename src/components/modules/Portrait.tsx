@@ -4,11 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface PortraitProps {
   imgSrc: string;
+  classes?: string;
 }
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Portrait = ({ imgSrc }: PortraitProps) => {
+const Portrait = ({ imgSrc, classes }: PortraitProps) => {
   const portraitRef = useRef<HTMLDivElement | null>(null);
 
   //   useEffect(() => {
@@ -34,13 +35,13 @@ const Portrait = ({ imgSrc }: PortraitProps) => {
   return (
     <div
       ref={portraitRef}
-      className="portrait relative max-w-[600px] w-full pl-[26px]"
+      className={`portrait relative lg:max-w-[600px] max-w-[400px] w-full pl-[26px] lg:mb-0 mb-8 ${classes}`}
     >
       <span className="block z-0 absolute top-[30px] bottom-[30px] left-0 w-14 bg-primary rounded-3xl"></span>
       <img
         src={imgSrc}
         alt="Tak wyglądam"
-        className="relative z-1 ml-auto max-w-xl w-full object-contain rounded-3xl"
+        className="relative z-1 ml-auto lg:max-w-xl w-full object-contain rounded-3xl"
       />
     </div>
   );

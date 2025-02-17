@@ -39,7 +39,7 @@ const TechStack = () => {
       <>
         <div
           ref={containerRef}
-          className="tech-stack grid grid-cols-6 gap-16 gap-y-16 justify-between"
+          className="tech-stack grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-16 gap-y-16 justify-between"
         >
           {TechStackList.map((item, techIndex) => (
             <SingleTech
