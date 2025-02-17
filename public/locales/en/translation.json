@@ -27,5 +27,10 @@
     "firm": "Working For",
     "role": "Role",
     "projectInfo": "PROJECT INFO",
-    "workExp": "WORK EXPERIENCE"
+    "workExp": "WORK EXPERIENCE",
+    "contactHead": "LET'S CONNECT",
+    "contactDesc": "Say hello at",
+    "contactEmail": "your email address",
+    "contactDesc2": "For more info, here's my",
+    "resume": "resume"
 }

@@ -65,7 +65,7 @@ const DualIcon = () => {
       </a>
 
       <a
-        href=""
+        href="https://github.com/Eternista/Portfolio"
         className="rounded-full w-14 h-14 flex items-center justify-center bg-secondary transition-colors duration-300 hover:bg-primary group"
       >
         <svg

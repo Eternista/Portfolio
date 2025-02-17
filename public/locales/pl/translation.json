@@ -27,5 +27,10 @@
     "firm": "Pracodawca",
     "role": "Rola",
     "projectInfo": "DANE",
-    "workExp": "Doświadczenie"
+    "workExp": "Doświadczenie",
+    "contactHead": "Nawiążmy Współprace!",
+    "contactDesc": "Odezwij się poprzez",
+    "contactEmail": "wysłanie mail'a",
+    "contactDesc2": "A po więcej informacji",
+    "resume": "tutaj masz moje cv"
 }

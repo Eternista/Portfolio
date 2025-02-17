@@ -3,26 +3,35 @@ import ContactForm from "../components/modules/ContactForm";
 import DualIcon from "../components/modules/Dual-icons";
 
 import Logo from "../assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 const Contact = (DevMode: boolean) => {
+
+  const { t } = useTranslation();
+  const heading = t("contactHead");
+  const desc1 = t("contactDesc");
+  const email = t("contactEmail");
+  const desc2 = t("contactDesc2");
+  const resume = t("resume");
+
   return (
     <Section idName="contact">
       <div className="flex justify-between lg:flex-row flex-col gap-8 lg:gap-0">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col gap-4">
-            <h2 className="text-white text-7xl">LET'S CONNECT</h2>
+            <h2 className="text-white text-7xl">{heading}</h2>
             <p className="mb-4">
-              Say hello at{" "}
+              {desc1}{" "}
               <a
                 className="border-b border-primary"
                 href="mailto:rafal.ziolkowski1234@gmail.com"
               >
-                your email address
+                {email}
               </a>
               <br />
-              For more info, here's my{" "}
+              {desc2}{" "}
               <a href="" className="border-b border-primary">
-                resume
+                {resume}
               </a>
             </p>
             <div className="flex gap-4">
