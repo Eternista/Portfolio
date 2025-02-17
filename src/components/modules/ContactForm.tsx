@@ -141,7 +141,7 @@ const ContactForm = ({ DevMode }: ContactFromProps) => {
           )}
         </div>
       </form>
-      {!DevMode && <DevTool control={control} />}
+      {DevMode && <DevTool control={control} />}
     </>
   );
 };
