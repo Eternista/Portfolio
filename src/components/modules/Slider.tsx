@@ -32,7 +32,7 @@ const Slider = ({ swiperDirection, slides, classNames }: SlideProps) => {
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       }}
-      allowTouchMove={false}
+      allowTouchMove={true}
       className={`w-full items-tr ${classNames}`}
       style={{ direction: swiperDirection }}
     >
