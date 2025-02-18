@@ -23,7 +23,7 @@ const Banner = () => {
       <div className="flex lg:flex-row flex-col-reverse items-center justify-between">
         <div className="max-w-xl w-full">
           <h1
-            className="lg:text-9xl text-8xl mb-6"
+            className="lg:text-9xl md:text-8xl text-6xl mb-6"
             dangerouslySetInnerHTML={{ __html: welcome }}
           />
           <p className="mb-11">{desc}</p>
