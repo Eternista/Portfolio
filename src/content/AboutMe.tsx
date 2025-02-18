@@ -16,10 +16,8 @@ const About = () => {
       <div className="flex lg:flex-row flex-col items-center justify-between">
         <Portrait imgSrc={MeImg} />
         <div className="max-w-xl w-full">
-          <h2 className="text-white mb-4 text-7xl">{ AboutMe }</h2>
-          <p className="mb-11">
-             
-          </p>
+          <h2 className="text-white mb-4 text-7xl">{AboutMe}</h2>
+          <p className="mb-11"></p>
           <SingleExp heading={workExp} expHistory={workExperience} />
         </div>
       </div>

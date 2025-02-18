@@ -3,6 +3,8 @@ import Section from "../components/modules/Section";
 import DualIcon from "../components/modules/Dual-icons";
 
 import MEJPG from "../assets/rafal-z1.jpg";
+import CVPL from "../assets/cv-pl.pdf";
+import CVEN from "../assets/cv-en.pdf";
 
 import { useTranslation } from "react-i18next";
 import gsap from "gsap";
@@ -11,9 +13,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Banner = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const welcome = t("welcome");
   const desc = t("description");
+  const lang = i18n.language;
 
   return (
     <Section idName="banner">
@@ -26,8 +29,9 @@ const Banner = () => {
           <p className="mb-11">{desc}</p>
           <div className="flex gap-4">
             <a
-              href="http://"
+              href={lang === "en" ? CVEN : CVPL}
               className="bg-primary pl-6 py-2 pr-2 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
+              download={true}
             >
               <span className="text-lg text-black font-extrabold w-fit flex items-center transition-colors duration-300 group-hover:text-white">
                 RESUME
@@ -57,7 +61,7 @@ const Banner = () => {
             <DualIcon />
           </div>
         </div>
-        <Portrait imgSrc={MEJPG} classes=""/>
+        <Portrait imgSrc={MEJPG} classes="" />
       </div>
     </Section>
   );

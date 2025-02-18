@@ -19,26 +19,26 @@ export const AppContent = () => {
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if(contentRef.current) {
+    if (contentRef.current) {
       const sections = contentRef.current.querySelectorAll(".section");
       sections.forEach((section) => {
         gsap.fromTo(
-        section,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            end: "top 30%",
-            toggleActions: "play none none reverse",
+          section,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: section,
+              start: "top 80%",
+              end: "top 30%",
+              toggleActions: "play none none reverse",
+            },
           },
-        }
-      );
-    });
-  }
+        );
+      });
+    }
   }, []);
 
   return (

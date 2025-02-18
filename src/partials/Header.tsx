@@ -7,23 +7,23 @@ const menuList = [
   {
     name: "O mnie",
     nameEn: "About",
-    link: "#about"
+    link: "#about",
   },
   {
     name: "Narzędzia",
     nameEn: "Tech Stack",
-    link: "#techstack"
+    link: "#techstack",
   },
   {
     name: "Projekty",
     nameEn: "Projects",
-    link: "#projects"
+    link: "#projects",
   },
   {
     name: "Opinie",
     nameEn: "Testimonials",
-    link: "#testimonials"
-  }
+    link: "#testimonials",
+  },
 ];
 
 const styleContainer = {
@@ -103,38 +103,37 @@ const Header = () => {
                 EN
               </button>
             )}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="block ml-5 lg:hidden text-white hover:bg-gray-700"
-          >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="block ml-5 lg:hidden text-white hover:bg-gray-700"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
           </div>
         </menu>
       </header>
-      <menu className={`lg:hidden flex justify-center items-center transition-all fixed top-0 w-full h-full bg-black/80 backdrop-blur-md ${isOpen ? "left-0" : "left-full"}`}>
-      <ul className="flex flex-col items-center gap-8 mr-8 w-fit justify-between">
-              {menuList.map((item, menuIndex) => (
-                <li key={menuIndex}>
-                  <a
-                    className="text-uppercase text-white text-lg"
-                    href={item.link}
-                  >
-                    {acLang === "en" ? item.nameEn : item.name}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <a
-                  href="contact"
-                  className="w-36 text-center bg-primary px-4 py-3 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
-                >
-                  <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
-                    {acLang === "en" ? "Contact" : "Kontakt"}
-                  </span>
-                </a>
-              </li>
-            </ul>
+      <menu
+        className={`lg:hidden flex justify-center items-center transition-all fixed top-0 w-full h-full bg-black/80 backdrop-blur-md ${isOpen ? "left-0" : "left-full"}`}
+      >
+        <ul className="flex flex-col items-center gap-8 mr-8 w-fit justify-between">
+          {menuList.map((item, menuIndex) => (
+            <li key={menuIndex}>
+              <a className="text-uppercase text-white text-lg" href={item.link}>
+                {acLang === "en" ? item.nameEn : item.name}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              href="contact"
+              className="w-36 text-center bg-primary px-4 py-3 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
+            >
+              <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
+                {acLang === "en" ? "Contact" : "Kontakt"}
+              </span>
+            </a>
+          </li>
+        </ul>
       </menu>
     </>
   );

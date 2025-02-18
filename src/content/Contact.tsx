@@ -4,14 +4,16 @@ import DualIcon from "../components/modules/Dual-icons";
 
 import Logo from "../assets/logo.png";
 import { useTranslation } from "react-i18next";
+import CVPL from "../assets/cv-pl.pdf";
+import CVEN from "../assets/cv-en.pdf";
 
 interface ContactProps {
   DevMode: boolean;
 }
 
-const Contact = ({DevMode} : ContactProps) => {
-
-  const { t } = useTranslation();
+const Contact = ({ DevMode }: ContactProps) => {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   const heading = t("contactHead");
   const desc1 = t("contactDesc");
   const email = t("contactEmail");
@@ -34,7 +36,11 @@ const Contact = ({DevMode} : ContactProps) => {
               </a>
               <br />
               {desc2}{" "}
-              <a href="" className="border-b border-primary">
+              <a
+                href={lang === "en" ? CVEN : CVPL}
+                className="border-b border-primary"
+                download={true}
+              >
                 {resume}
               </a>
             </p>

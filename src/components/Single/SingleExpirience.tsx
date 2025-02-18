@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { FaCalendar, FaBuilding, FaLocationDot } from "react-icons/fa6";
 import Separete from "./Separate";
 import { useTranslation } from "react-i18next";
@@ -19,7 +19,6 @@ interface SingleExpProps {
 }
 
 const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
-
   const { i18n } = useTranslation();
   const language = i18n.language;
 
@@ -34,13 +33,7 @@ const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
               <time className="flex gap-2 items-center">
                 <FaCalendar />{" "}
                 <small className="text-unlock text-sm text-[#c7c7c7]">
-                  {
-                    language == "en" 
-                    ? 
-                    (item.term) 
-                    :
-                    (item.termEN)
-                  }
+                  {language == "en" ? item.term : item.termEN}
                 </small>
               </time>
             </div>
@@ -48,13 +41,9 @@ const SingleExp = ({ heading, expHistory }: SingleExpProps) => {
               <p className="flex items-center gap-2">
                 <FaBuilding />
                 <small className="text-unlock text-sm text-[#c7c7c7]">
-                  {
-                    language == "en" 
-                    ? 
-                    (item.organizationName) 
-                    :
-                    (item.organizationNameEN)
-                  }
+                  {language == "en"
+                    ? item.organizationName
+                    : item.organizationNameEN}
                 </small>
               </p>
               <p className="flex items-center gap-2">
