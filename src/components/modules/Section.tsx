@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 interface SectionProps {
   classNames?: string;
   sectionTitle?: string;
-  idName: string;
+  idName?: string;
   children?: ReactElement;
 }
 

@@ -1,13 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./partials/Header";
-import Contact from "./content/Contact";
 import Banner from "./content/Banner";
-import About from "./content/AboutMe";
-import TechStack from "./content/TechStack";
-import Projects from "./content/Projects";
-import Testimonials from "./content/Testimonials";
 import Separete from "./components/Single/Separate";
+import Loading from "./components/Single/Loading";
+const About = lazy(() => import ("./content/AboutMe"));
+const TechStack = lazy(() => import ("./content/TechStack"));
+const Projects = lazy(() => import ("./content/Projects"));
+const Testimonials = lazy(() => import ("./content/Testimonials"));
+const Contact = lazy(() => import ("./content/Contact"));
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -42,18 +43,28 @@ export const AppContent = () => {
   }, []);
 
   return (
-    <div ref={contentRef} className="page dark lg:pt-32 md:pt-24 pt-16">
+    <div ref={contentRef} className="page dark lg:pt-24 md:pt-16 pt-16">
       <Banner />
       <Separete classNames="w-1/4" />
-      <TechStack />
+      <Suspense fallback={<Loading />}>
+        <TechStack />
+      </Suspense>
       <Separete classNames="w-1/3" />
-      <Projects />
+      <Suspense fallback={<Loading />}>
+        <Projects />
+      </Suspense>
       <Separete classNames="w-1/2" />
-      <Testimonials />
+      <Suspense fallback={<Loading />}>
+        <Testimonials />
+      </Suspense>
       <Separete classNames="w-3/4" />
-      <About />
+      <Suspense fallback={<Loading />}>
+        <About />
+      </Suspense>
       <Separete classNames="w-full" />
-      <Contact DevMode={DevMode} />
+      <Suspense fallback={<Loading />}>
+        <Contact DevMode={DevMode} />
+      </Suspense>
       {!DevMode && (
         <>
           <Header />
