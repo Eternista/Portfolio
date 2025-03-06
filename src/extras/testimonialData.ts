@@ -4,16 +4,6 @@ import User from "../assets/user.png";
 export const upperTestimonial: SingleSlideProps[] = [
   {
     img: User,
-    name: "Jacek Nikodem",
-    opinion:
-      "Gdyby ode mnie to zależało to by dalej by Pracował na PG. Zawsze wykazywał się terminowym i priorytetowym podejściem do projektów, oraz dużą chęcią rozwoju.",
-    opinionEN:
-      "If it were up to me, he would still be working at PG. He always demonstrated a timely and priority-driven approach to projects, as well as a strong willingness to develop.",
-    role: "Kierownik Działu WEB - PG",
-    roleEN: "Head of WEB Department - PG",
-  },
-  {
-    img: User,
     name: "Marcin Gruca",
     opinion:
       "Rafał wykazał się dużą chęcią do nauki i zdobywania wiedzy. Zawsze dotrzymywał terminów, nawet zdawał swoją pracę przed! Wyjątkowo się przysłużył z zakresie Wordpress",
@@ -34,13 +24,13 @@ export const upperTestimonial: SingleSlideProps[] = [
   },
   {
     img: User,
-    name: "Anna Teklak",
+    name: "Mariusz Miś",
     opinion:
-      "Rafał otwarcie podchodził do projeków i zawsze dbał o dobrą komunikacje z zespołem. Terminowy, dokładny i szczery to są słowa które najlepiej mogą go opisać.",
+      "Rafał wykonywał swoje obowiązki sumiennie, z zaangażowaniem i terminowością. Przyczynił się do powstania wielu nowych projektów. Jestem przekonany, że doskonale poradzi sobie z przyszłymi powierzonymi zadaniami.",
     opinionEN:
-      "Rafał approached projects openly and always ensured good communication with the team. Punctual, precise, and honest are the words that best describe him.",
-    role: "Task Menager działu Web - PG",
-    roleEN: "Task Manager of the Web Department - PG",
+      "Rafał performed his duties conscientiously, with commitment and punctuality. He contributed to many new projects. I am confident that he will handle future assignments excellently.",
+    role: "CO-FOUNDER Ideative",
+    roleEN: "Co-Founder at Ideative",
   },
 ];
 
@@ -54,16 +44,6 @@ export const downTestimonial: SingleSlideProps[] = [
       "Rafał is a cheerful and communicative person who excels both in working with others' code and creating his own solutions. We worked together on projects for brands like Honda, Ciech, and Przysnacki, and our collaboration was always smooth.",
     role: "Backend developer GoldeSubmarine",
     roleEN: "Backend Developer at GoldenSubmarine",
-  },
-  {
-    img: User,
-    name: "Mariusz Miś",
-    opinion:
-      "Rafał wykonywał swoje obowiązki sumiennie, z zaangażowaniem i terminowością. Przyczynił się do powstania wielu nowych projektów. Jestem przekonany, że doskonale poradzi sobie z przyszłymi powierzonymi zadaniami.",
-    opinionEN:
-      "Rafał performed his duties conscientiously, with commitment and punctuality. He contributed to many new projects. I am confident that he will handle future assignments excellently.",
-    role: "CO-FOUNDER Ideative",
-    roleEN: "Co-Founder at Ideative",
   },
   {
     img: User,
