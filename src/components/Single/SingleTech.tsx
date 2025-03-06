@@ -1,3 +1,5 @@
+import LazyImage from "./LazyImage";
+
 interface TechProps {
   techSrc: string;
   techName: string;
@@ -6,7 +8,7 @@ interface TechProps {
 const SingleTech = ({ techSrc, techName }: TechProps) => {
   return (
     <div className="tech-item w-full h-full flex justify-center items-center">
-      <img src={techSrc} alt={techName} className="object-contain h-32 w-32" />
+      <LazyImage src={techSrc} alt={techName} classes="object-contain h-32 w-32" />
     </div>
   );
 };

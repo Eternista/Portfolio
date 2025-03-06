@@ -3,6 +3,7 @@ import ContactForm from "../components/modules/ContactForm";
 import DualIcon from "../components/modules/Dual-icons";
 
 import Logo from "../assets/logo.png";
+import LazyImage from "../components/Single/LazyImage";
 import { useTranslation } from "react-i18next";
 import CVPL from "../assets/cv-pl.pdf";
 import CVEN from "../assets/cv-en.pdf";
@@ -48,10 +49,10 @@ const Contact = ({ DevMode }: ContactProps) => {
               <DualIcon />
             </div>
           </div>
-          <img className="lg:block hidden w-24" src={Logo} alt="My Logo" />
+          <LazyImage classes="lg:block hidden w-24" src={Logo} alt="My Logo" />
         </div>
         <ContactForm DevMode={DevMode} />
-        <img className="lg:hidden block w-24 mt-4" src={Logo} alt="My Logo" />
+        <LazyImage classes="lg:hidden block w-24 mt-4" src={Logo} alt="My Logo" />
       </div>
     </Section>
   );

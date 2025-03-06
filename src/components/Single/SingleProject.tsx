@@ -1,6 +1,7 @@
 import Separete from "./Separate";
 import { SingleProjectProps } from "../../extras/interfaces";
 import { useTranslation } from "react-i18next";
+import LazyImage from "./LazyImage";
 
 const SingleProject = ({
   heading,
@@ -25,8 +26,8 @@ const SingleProject = ({
   return (
     <div className="single-project flex lg:flex-nowrap flex-wrap items-center justify-between gap-12 lg:mb-32 md:mb-16 mb-10">
       <div className="bg-gray-800 rounded-3xl max-w-[600px] w-full md:px-14 md:py-32 px-8 py-16 flex items-center justify-center">
-        <img
-          className="rounded-3xl"
+        <LazyImage
+          classes="rounded-3xl"
           src={image}
           alt={lang == "en" ? imageAltEN : imageAlt}
         />

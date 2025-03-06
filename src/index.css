@@ -76,3 +76,16 @@
 .swiper-wrapper .swiper-slide {
   height: unset;
 }
+
+.rotate-anim {
+  animation: rotateAnim 2s ease-in-out infinite;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
