@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import LazyImage from "../components/Single/LazyImage"; 
 import logo from "../assets/logo.png";
 
 const menuList = [
@@ -60,7 +61,7 @@ const Header = () => {
         }`}
       >
         <menu className="flex items-center justify-between">
-          <img className="w-24" src={logo} alt="logo" />
+          <LazyImage classes="w-24" src={logo} alt="logo" />
           <div className="flex items-center w-fit">
             <ul className="lg:flex hidden items-center gap-8 mr-8 w-fit justify-between">
               {menuList.map((item, menuIndex) => (

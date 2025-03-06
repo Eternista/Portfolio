@@ -4,6 +4,7 @@ import "swiper/css/free-mode";
 import { FreeMode, Autoplay } from "swiper/modules";
 import { SingleSlideProps } from "../../extras/interfaces";
 import { useTranslation } from "react-i18next";
+import LazyImage from "../Single/LazyImage";
 
 interface SlideProps {
   swiperDirection: "rtl" | "ltr";
@@ -43,11 +44,6 @@ const Slider = ({ swiperDirection, slides, classNames }: SlideProps) => {
           key={slideIndex}
         >
           <div className="flex gap-5 items-start h-full">
-            <img
-              src={slide.img}
-              alt="User Avatar"
-              className="w-10 h-10 rounded-full border-yellow-300 border-2 mb-4"
-            />
             <div className="flex flex-col justify-between h-full">
               <p className="text-lg">
                 {language === "en" ? slide.opinionEN : slide.opinion}
