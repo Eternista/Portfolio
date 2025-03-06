@@ -4,7 +4,6 @@ import "swiper/css/free-mode";
 import { FreeMode, Autoplay } from "swiper/modules";
 import { SingleSlideProps } from "../../extras/interfaces";
 import { useTranslation } from "react-i18next";
-import LazyImage from "../Single/LazyImage";
 
 interface SlideProps {
   swiperDirection: "rtl" | "ltr";
