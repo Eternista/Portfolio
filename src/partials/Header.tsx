@@ -61,7 +61,9 @@ const Header = () => {
         }`}
       >
         <menu className="flex items-center justify-between">
-          <LazyImage classes="w-24" src={logo} alt="logo" />
+          <a href="#home">
+            <LazyImage classes="w-24" src={logo} alt="logo" />
+          </a>
           <div className="flex items-center w-fit">
             <ul className="lg:flex hidden items-center gap-8 mr-8 w-fit justify-between">
               {menuList.map((item, menuIndex) => (
@@ -76,7 +78,7 @@ const Header = () => {
               ))}
               <li>
                 <a
-                  href="contact"
+                  href="#contact"
                   className="w-36 text-center bg-primary px-4 py-3 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
                 >
                   <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">
@@ -126,7 +128,7 @@ const Header = () => {
           ))}
           <li>
             <a
-              href="contact"
+              href="#contact"
               className="w-36 text-center bg-primary px-4 py-3 rounded-[40px] transition-colors duration-300 hover:bg-secondary group"
             >
               <span className="text-lg text-black font-extrabold transition-colors duration-300 group-hover:text-white">

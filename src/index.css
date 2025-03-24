@@ -19,6 +19,11 @@
   }
 }
 
+body, html, #root {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 .page.light {
   background-color: #f2f2f2;
 }
@@ -35,13 +40,6 @@
 
 .page.dark .logo {
   fill: #fff;
-}
-
-#canvas canvas {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .primary {

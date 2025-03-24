@@ -10,7 +10,7 @@ interface LazyImageProps {
 const LazyImage = ({src, alt, classes}: LazyImageProps) => {
     
     return (
-        <LazyLoadImage height={"auto"} width={"auto"} effect="blur" src={src} alt={alt} className={`${classes}`}/>
+        <LazyLoadImage height={'auto'} width={"auto"} effect="blur" src={src} alt={alt} className={`${classes}`}/>
     )
 }
 

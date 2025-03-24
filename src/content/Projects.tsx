@@ -25,6 +25,7 @@ const Projects = () => {
             firm={project.firm}
             firmEN={project.firm}
             client={project.client}
+            technology={project.technology}
           />
         ))}
       </>

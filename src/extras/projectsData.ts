@@ -4,6 +4,8 @@ import PG from "../assets/Projects/pg-edu.jpg";
 import Honda from "../assets/Projects/honda.jpg";
 import KupHipoteke from "../assets/Projects/kuphipoteke.jpg";
 import Przysnacki from "../assets/Projects/przysnacki.jpg";
+import Wedel from "../assets/Projects/wedel.jpg";
+import Felix from "../assets/Projects/felixpolska.jpg";
 
 const ProjectList: SingleProjectProps[] = [
   {
@@ -19,6 +21,7 @@ const ProjectList: SingleProjectProps[] = [
     image: ChatPG,
     firm: "Politechnika Gdańska",
     firmEN: "Gdańsk University of Technology",
+    technology: "Docker / React / Typescript / API / Tailwind / Java / Spring",
   },
   {
     heading: "PG Website - Strona informacyjna PG",
@@ -31,6 +34,7 @@ const ProjectList: SingleProjectProps[] = [
     image: PG,
     firm: "Politechnika Gdańska",
     firmEN: "Gdańsk University of Technology",
+    technology: "Docker / DRUPAL / Typescript / PHP / Bootstrap"
   },
   {
     heading: "Honda - Samochody hybrydowe",
@@ -46,6 +50,7 @@ const ProjectList: SingleProjectProps[] = [
     firm: "GoldenSubmarine",
     firmEN: "GoldenSubmarine",
     client: "Honda",
+    technology: "Symfony / Twig / PHP / Typescript / Bootstrap / Vue / SCSS",
   },
   {
     heading: "Kup Hipotekę",
@@ -61,6 +66,7 @@ const ProjectList: SingleProjectProps[] = [
     firm: "GoldenSubmarine",
     firmEN: "GoldenSubmarine",
     client: "Ultimo",
+    technology: "Symfony / Twig / PHP / Typescript / Bootstrap / Vue / SCSS",
   },
   {
     heading: "Przysnacki",
@@ -76,6 +82,39 @@ const ProjectList: SingleProjectProps[] = [
     firm: "GoldenSubmarine",
     firmEN: "GoldenSubmarine",
     client: "Przysnacki",
+    technology: "Symfony / Twig / PHP / Typescript / Bootstrap / Vue / SCSS",
+  },
+  {
+    heading: "E.Wedel",
+    headingEN: "E.Wedel",
+    description:
+      "Strona informacyjna dla popularnej firmy produkującej czekolade. Projekt realizowany przez sześcioosobowy zespół: Backend Developer, UI-UX Designer, Asystent klienta, Manager projektu, Manager zadań",
+    descriptionEN:
+      "Information page for a popular chocklate company. This project was realized with the help of a six-person team: Backend Developer, UI-UX Designer, Client Assistant, Project Manager, Task Manager",
+    role: "Frontend Developer",
+    imageAlt: "Obraz strony wedel",
+    imageAltEN: "Image of wedel",
+    image: Wedel,
+    firm: "GoldenSubmarine",
+    firmEN: "GoldenSubmarine",
+    client: "E.Wedel",
+    technology: "Symfony / Twig / PHP / Typescript / Bootstrap / Vue / SCSS",
+  },
+  {
+    heading: "Felix",
+    headingEN: "Felix",
+    description:
+      "Strona informacyjna dla popularnej firmy sprzedającej produkty związane z. Projekt realizowany przez sześcioosobowy zespół: Backend Developer, UI-UX Designer, Asystent klienta, Manager projektu, Manager zadań",
+    descriptionEN:
+      "Information page for a popular nuts company. This project was realized with the help of a six-person team: Backend Developer, UI-UX Designer, Client Assistant, Project Manager, Task Manager",
+    role: "Frontend Developer",
+    imageAlt: "Obraz strony felix",
+    imageAltEN: "Image of felix",
+    image: Felix,
+    firm: "GoldenSubmarine",
+    firmEN: "GoldenSubmarine",
+    client: "E.Wedel",
+    technology: "Symfony / Twig / PHP / Typescript / Bootstrap / Vue / SCSS",
   },
 ];
 
