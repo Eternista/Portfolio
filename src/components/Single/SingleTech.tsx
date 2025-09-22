@@ -7,7 +7,7 @@ interface TechProps {
 
 const SingleTech = ({ techSrc, techName }: TechProps) => {
   return (
-    <div className="tech-item w-full h-full flex justify-center items-center">
+    <div className="tech-item w-full h-full md:min-h-[255px] min-h-[152px] flex justify-center items-center">
       <LazyImage src={techSrc} alt={techName} classes="object-contain h-32 w-32" />
     </div>
   );

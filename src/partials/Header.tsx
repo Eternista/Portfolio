@@ -53,6 +53,16 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // When the menu is open, disable scrolling on the page.
+    document.documentElement.style.overflowY = isOpen ? "hidden" : "auto";
+
+    // Cleanup function to ensure scrolling is re-enabled when the component unmounts.
+    return () => {
+      document.documentElement.style.overflowY = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <>
       <header

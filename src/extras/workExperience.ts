@@ -1,5 +1,23 @@
 export const workExperience = [
   {
+    role: "FullStack Developer",
+    termEN: "Kwiecień 2025 – Wrzesień 2025",
+    term: "April 2025 – September 2025",
+    organizationName: "Profiart",
+    organizationNameEN: "Profiart",
+    organizationLocation: "Olsztyn",
+    id: 125087653,
+  },
+  {
+    role: "FullStack Developer",
+    termEN: "Marzec 2025 – Lipiec 2025",
+    term: "March 2025 – July 2025",
+    organizationName: "NeuroN Fundation",
+    organizationNameEN: "Fundacja NeuroN",
+    organizationLocation: "Zdalna",
+    id: 1256341,
+  },
+  {
     role: "Frontend Developer",
     termEN: "Październik 2023 – Grudzień 2024",
     term: "October 2023 – December 2024",
